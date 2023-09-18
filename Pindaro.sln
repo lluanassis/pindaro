@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{CB361231-FA68-4532-9F71-370E3098846E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{FA39F3A3-63B8-448B-871C-A4E0AC765BDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intrgration", "Intrgration", "{0F20D7B1-C705-423F-A22B-EACB9C369F51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{2B72B875-E8F8-430C-9DB7-7B513E622E95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pindaro.Services.CouponAPI", "Pindaro.Services.CouponAPI\Pindaro.Services.CouponAPI.csproj", "{A9B2C627-F3DC-49CC-A26D-32AF6A4F2894}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9B2C627-F3DC-49CC-A26D-32AF6A4F2894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9B2C627-F3DC-49CC-A26D-32AF6A4F2894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9B2C627-F3DC-49CC-A26D-32AF6A4F2894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9B2C627-F3DC-49CC-A26D-32AF6A4F2894}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A9B2C627-F3DC-49CC-A26D-32AF6A4F2894} = {2B72B875-E8F8-430C-9DB7-7B513E622E95}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C12F290C-B3CF-4081-9939-595F3E46FE67}
+	EndGlobalSection
+EndGlobal

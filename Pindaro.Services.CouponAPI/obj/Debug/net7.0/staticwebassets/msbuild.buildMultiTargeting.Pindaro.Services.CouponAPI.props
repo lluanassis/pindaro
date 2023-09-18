@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Pindaro.Services.CouponAPI.props" />
+</Project>
