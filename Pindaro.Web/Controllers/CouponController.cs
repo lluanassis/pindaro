@@ -21,6 +21,7 @@ namespace Pindaro.Web.Controllers
 
             if (response != null && response.IsSuccess)
             {
+                TempData["success"] = "Coupon created successfully.";
                 list = JsonConvert.DeserializeObject<List<CouponDto>>(Convert.ToString(response.Result));
             }
             else
@@ -44,6 +45,7 @@ namespace Pindaro.Web.Controllers
 
                 if(response != null && response.IsSuccess)
                 {
+                    TempData["success"] = "Coupon created successfully.";
                     return RedirectToAction(nameof(CouponIndex));
                 }
                 else
@@ -78,6 +80,7 @@ namespace Pindaro.Web.Controllers
 
             if (response != null && response.IsSuccess)
             {
+                TempData["success"] = "Coupon deleted successfully.";
                 return RedirectToAction(nameof(CouponIndex));
             }
             else
