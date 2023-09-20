@@ -47,7 +47,6 @@ namespace Pindaro.Web.Controllers
             return View(model);
         }
 
-        //[HttpDelete]
         public async Task<IActionResult> CouponDelete(int couponId)
         {
             ResponseDto? response = await _couponService.GetCouponByIdAsync(couponId);
@@ -61,17 +60,17 @@ namespace Pindaro.Web.Controllers
             return NotFound();
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> CouponDelete(CouponDto couponDto)
-        //{
-        //    ResponseDto? response = await _couponService.DeleteCouponsAsync(couponDto.CouponId);
+        [HttpPost]
+        public async Task<IActionResult> CouponDelete(CouponDto couponDto)
+        {
+            ResponseDto? response = await _couponService.DeleteCouponsAsync(couponDto.CouponId);
 
-        //    if (response != null && response.IsSuccess)
-        //    {
-        //        return RedirectToAction(nameof(CouponIndex));
-        //    }
+            if (response != null && response.IsSuccess)
+            {
+                return RedirectToAction(nameof(CouponIndex));
+            }
 
-        //    return View(couponDto);
-        //}
+            return View(couponDto);
+        }
     }
 }
