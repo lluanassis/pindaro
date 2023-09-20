@@ -6,15 +6,15 @@ using Pindaro.Services.CouponAPI.Models.Dto;
 
 namespace Pindaro.Services.CouponAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/coupon")]
     [ApiController]
-    public class CouponController : ControllerBase
+    public class CouponAPIController : ControllerBase
     {
         private readonly AppDbContext _db;
         private ResponseDto _response;
         private IMapper _mapper;
 
-        public CouponController(AppDbContext db, IMapper mapper)
+        public CouponAPIController(AppDbContext db, IMapper mapper)
         {
             _db = db;
             _mapper = mapper;
