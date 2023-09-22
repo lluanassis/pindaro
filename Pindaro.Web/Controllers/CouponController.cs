@@ -21,7 +21,6 @@ namespace Pindaro.Web.Controllers
 
             if (response != null && response.IsSuccess)
             {
-                TempData["success"] = "Coupon created successfully.";
                 list = JsonConvert.DeserializeObject<List<CouponDto>>(Convert.ToString(response.Result));
             }
             else
