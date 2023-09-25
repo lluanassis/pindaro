@@ -4,6 +4,6 @@ namespace Pindaro.Web.Services.IService
 {
     public interface IBaseService
     {
-        Task<ResponseDto?> SendAsync(RequestDto requesDto);
+        Task<ResponseDto?> SendAsync(RequestDto requesDto, bool withBearer = true);
     }
 }
