@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.Services.CouponAPI"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.Web", "Pindaro.Web\Pindaro.Web.csproj", "{A189B977-468F-4942-9D1C-023ABF4149AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pindaro.Services.AuthAPI", "Pindaro.Services.AuthAPI\Pindaro.Services.AuthAPI.csproj", "{79BB41DB-0BD3-48C1-A80D-D72986B5257E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.Services.AuthAPI", "Pindaro.Services.AuthAPI\Pindaro.Services.AuthAPI.csproj", "{79BB41DB-0BD3-48C1-A80D-D72986B5257E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pindaro.Services.ProductAPI", "Pindaro.Services.ProductAPI\Pindaro.Services.ProductAPI.csproj", "{7906DFAE-5B9F-452D-99FB-19783E0052F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{79BB41DB-0BD3-48C1-A80D-D72986B5257E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79BB41DB-0BD3-48C1-A80D-D72986B5257E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79BB41DB-0BD3-48C1-A80D-D72986B5257E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7906DFAE-5B9F-452D-99FB-19783E0052F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7906DFAE-5B9F-452D-99FB-19783E0052F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7906DFAE-5B9F-452D-99FB-19783E0052F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7906DFAE-5B9F-452D-99FB-19783E0052F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{A9B2C627-F3DC-49CC-A26D-32AF6A4F2894} = {2B72B875-E8F8-430C-9DB7-7B513E622E95}
 		{A189B977-468F-4942-9D1C-023ABF4149AB} = {CB361231-FA68-4532-9F71-370E3098846E}
 		{79BB41DB-0BD3-48C1-A80D-D72986B5257E} = {2B72B875-E8F8-430C-9DB7-7B513E622E95}
+		{7906DFAE-5B9F-452D-99FB-19783E0052F2} = {2B72B875-E8F8-430C-9DB7-7B513E622E95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C12F290C-B3CF-4081-9939-595F3E46FE67}
