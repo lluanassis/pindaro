@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Pindaro.Web.Models
+namespace Pindaro.Services.ShoppingCartAPI.Models.Dto
 {
     public class ProductDto
     {
@@ -10,7 +10,5 @@ namespace Pindaro.Web.Models
         public string Description { get; set; }
         public string CategoryName { get; set; }
         public string ImageUrl { get; set; }
-        [Range(1,100)]
-        public int Count { get; set; } = 1; 
     }
 }
