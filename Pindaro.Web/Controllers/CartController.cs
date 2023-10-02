@@ -18,7 +18,7 @@ namespace Pindaro.Web.Controllers
         [Authorize]
         public async Task<IActionResult> CartIndex()
         {
-            return View();
+            return View(await LoadCartDtoBasedOnLoggedInUser());
         }
 
         private async Task<CartDto> LoadCartDtoBasedOnLoggedInUser()

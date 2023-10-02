@@ -27,7 +27,7 @@ namespace Pindaro.Web.Services
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.ShoppingCartAPIBase + "/api/cart/GetCart/" + userId
+                Url = SD.ShoppingCartAPIBase + "/api/cart/GetCart" + userId
             });
         }
 
@@ -45,7 +45,7 @@ namespace Pindaro.Web.Services
         {
             return await _baseService.SendAsync(new RequestDto()
             {
-                ApiType = SD.ApiType.PUT,
+                ApiType = SD.ApiType.POST,
                 Data = cartDto,
                 Url = SD.ShoppingCartAPIBase + "/api/cart/CartUpsert"
             });
