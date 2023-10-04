@@ -7,6 +7,6 @@ namespace Pindaro.Web.Services.IService
         Task<ResponseDto?> GetCartByUserIdAsync(string userId);
         Task<ResponseDto?> UpsertCartAsync(CartDto cartDto);
         Task<ResponseDto?> RemoveFromCartAsync(int cartDetailsId);
-        Task<ResponseDto?> ApplyCoupon(CartDto cartDto);
+        Task<ResponseDto?> ApplyCouponAsync(CartDto cartDto);
     }
 }

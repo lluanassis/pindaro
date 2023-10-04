@@ -12,7 +12,7 @@ namespace Pindaro.Web.Services
             _baseService = baseService;
         }
 
-        public async Task<ResponseDto?> ApplyCoupon(CartDto cartDto)
+        public async Task<ResponseDto?> ApplyCouponAsync(CartDto cartDto)
         {
             return await _baseService.SendAsync(new RequestDto()
             {
@@ -35,7 +35,7 @@ namespace Pindaro.Web.Services
         {
             return await _baseService.SendAsync(new RequestDto()
             {
-                ApiType = SD.ApiType.POST,
+                ApiType = SD.ApiType.DELETE,
                 Data = cartDetailsId,
                 Url = SD.ShoppingCartAPIBase + "/api/cart/RemoveCart"
             });
