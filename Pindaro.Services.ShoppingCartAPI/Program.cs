@@ -7,6 +7,7 @@ using Pindaro.Services.ShoppingCartAPI.Data;
 using Pindaro.Services.ShoppingCartAPI.Extensions;
 using Pindaro.Services.ShoppingCartAPI.Service;
 using Pindaro.Services.ShoppingCartAPI.Service.IService;
+using Pindaro.Services.ShoppingCartAPI.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,10 +19,12 @@ builder.Services.AddDbContext<AppDbContext>(option =>
 IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<BackendApiAuthenticationHttpClientHandler>();
 builder.Services.AddScoped<ICouponService, CouponService>();
 builder.Services.AddHttpClient("Product", u => u.BaseAddress =
-    new Uri(builder.Configuration["ServiceUrls:ProductAPI"])).ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+    new Uri(builder.Configuration["ServiceUrls:ProductAPI"])).AddHttpMessageHandler<BackendApiAuthenticationHttpClientHandler>().ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
     {
         ClientCertificateOptions = ClientCertificateOption.Manual,
         ServerCertificateCustomValidationCallback =
@@ -31,7 +34,7 @@ builder.Services.AddHttpClient("Product", u => u.BaseAddress =
             } // ignora o certificado SSL
     });
 builder.Services.AddHttpClient("Coupon", u => u.BaseAddress =
-    new Uri(builder.Configuration["ServiceUrls:CouponAPI"])).ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+    new Uri(builder.Configuration["ServiceUrls:CouponAPI"])).AddHttpMessageHandler<BackendApiAuthenticationHttpClientHandler>().ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
     {
         ClientCertificateOptions = ClientCertificateOption.Manual,
         ServerCertificateCustomValidationCallback =

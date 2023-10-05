@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.Services.AuthAPI", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.Services.ProductAPI", "Pindaro.Services.ProductAPI\Pindaro.Services.ProductAPI.csproj", "{7906DFAE-5B9F-452D-99FB-19783E0052F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pindaro.Services.ShoppingCartAPI", "Pindaro.Services.ShoppingCartAPI\Pindaro.Services.ShoppingCartAPI.csproj", "{99BD4D92-F8CB-44B6-8701-9DA124D0C4E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.Services.ShoppingCartAPI", "Pindaro.Services.ShoppingCartAPI\Pindaro.Services.ShoppingCartAPI.csproj", "{99BD4D92-F8CB-44B6-8701-9DA124D0C4E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
