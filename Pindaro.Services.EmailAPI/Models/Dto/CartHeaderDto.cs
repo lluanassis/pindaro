@@ -1,4 +1,4 @@
-﻿namespace Pindaro.Web.Models
+﻿namespace Pindaro.Services.EmailAPI.Models.Dto
 {
     public class CartHeaderDto
     {

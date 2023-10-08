@@ -1,10 +1,8 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Pindaro.MessageBus;
-using Pindaro.Services.AuthAPI.Data;
-using Pindaro.Services.AuthAPI.Models;
-using Pindaro.Services.AuthAPI.Service;
-using Pindaro.Services.AuthAPI.Service.IService;
+using Pindaro.Services.EmailAPI.Data;
+using Pindaro.Services.EmailAPI.Extension;
+using Pindaro.Services.EmailAPI.Messaging;
+using Pindaro.Services.EmailAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,14 +11,13 @@ builder.Services.AddDbContext<AppDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("ApiSettings:JwtOptions"));
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
+
+var optionBuilder = new DbContextOptionsBuilder<AppDbContext>();
+optionBuilder.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+builder.Services.AddSingleton(new EmailService(optionBuilder.Options));
+
+builder.Services.AddSingleton<IAzureServiceBusConsumer, AzureServiceBusConsumer>();
 builder.Services.AddControllers();
-builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IMessageBus, MessageBus>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -36,16 +33,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.MapControllers();
 
 ApplyMigration();
 
-app.Run();
+app.UseAzureServiceBusConsumer();
 
+app.Run();
 void ApplyMigration()
 {
     using (var scope = app.Services.CreateScope())
