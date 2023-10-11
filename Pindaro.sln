@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.Services.ProductAPI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.Services.ShoppingCartAPI", "Pindaro.Services.ShoppingCartAPI\Pindaro.Services.ShoppingCartAPI.csproj", "{99BD4D92-F8CB-44B6-8701-9DA124D0C4E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pindaro.MessageBus", "Pindaro.MessageBus\Pindaro.MessageBus.csproj", "{2BEC0E3F-5747-4964-92E6-0B962447112B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.MessageBus", "Pindaro.MessageBus\Pindaro.MessageBus.csproj", "{2BEC0E3F-5747-4964-92E6-0B962447112B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pindaro.Services.EmailAPI", "Pindaro.Services.EmailAPI\Pindaro.Services.EmailAPI.csproj", "{60209150-FE3A-49CE-9C62-D2EB299F5D7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pindaro.Services.EmailAPI", "Pindaro.Services.EmailAPI\Pindaro.Services.EmailAPI.csproj", "{60209150-FE3A-49CE-9C62-D2EB299F5D7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pindaro.Services.OrderAPI", "Pindaro.Services.OrderAPI\Pindaro.Services.OrderAPI.csproj", "{1AD5C50A-64F2-4CAF-90E1-DE78971AAF74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{60209150-FE3A-49CE-9C62-D2EB299F5D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60209150-FE3A-49CE-9C62-D2EB299F5D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60209150-FE3A-49CE-9C62-D2EB299F5D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AD5C50A-64F2-4CAF-90E1-DE78971AAF74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AD5C50A-64F2-4CAF-90E1-DE78971AAF74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AD5C50A-64F2-4CAF-90E1-DE78971AAF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AD5C50A-64F2-4CAF-90E1-DE78971AAF74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +77,7 @@ Global
 		{99BD4D92-F8CB-44B6-8701-9DA124D0C4E2} = {2B72B875-E8F8-430C-9DB7-7B513E622E95}
 		{2BEC0E3F-5747-4964-92E6-0B962447112B} = {0F20D7B1-C705-423F-A22B-EACB9C369F51}
 		{60209150-FE3A-49CE-9C62-D2EB299F5D7B} = {2B72B875-E8F8-430C-9DB7-7B513E622E95}
+		{1AD5C50A-64F2-4CAF-90E1-DE78971AAF74} = {2B72B875-E8F8-430C-9DB7-7B513E622E95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C12F290C-B3CF-4081-9939-595F3E46FE67}
