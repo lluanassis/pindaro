@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Pindaro.Services.EmailAPI.Data;
+using Pindaro.Services.EmailAPI.Message;
 using Pindaro.Services.EmailAPI.Models;
 using Pindaro.Services.EmailAPI.Models.Dto;
 using System.Text;
@@ -32,6 +33,12 @@ namespace Pindaro.Services.EmailAPI.Services
             message.Append("</ul>");
 
             await LogAndEmail(message.ToString(), cartDto.CartHeader.Email);
+        }
+
+        public async Task LogOrderPlaced(RewardsMessage rewardsDto)
+        {
+            string message = "New Order Placed. <br/> Order ID: " + rewardsDto.OrderId;
+            await LogAndEmail(message, "luan2lobo@gmail.com");
         }
 
         public async Task RegisteredUserEmailAndLog(string email)

@@ -1,4 +1,5 @@
-﻿using Pindaro.Services.EmailAPI.Models.Dto;
+﻿using Pindaro.Services.EmailAPI.Message;
+using Pindaro.Services.EmailAPI.Models.Dto;
 
 namespace Pindaro.Services.EmailAPI.Services
 {
@@ -6,5 +7,6 @@ namespace Pindaro.Services.EmailAPI.Services
     {
         Task EmailCartAndLog(CartDto cartDto);
         Task RegisteredUserEmailAndLog(string email);
+        Task LogOrderPlaced(RewardsMessage rewardsDto);
     }
 }
